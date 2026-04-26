@@ -1,0 +1,1636 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>S.S Enterprises | Premium Property Consultant in Mathura & Nearby Cities</title>
+  <meta name="description" content="S.S Enterprises helps buyers and investors discover verified residential and commercial properties with transparent pricing and professional guidance." />
+  <meta name="keywords" content="real estate, property dealer, broker, Mathura property, apartment, villa, plot, commercial property" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#0F172A" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="S.S Enterprises | Premium Property Consultant" />
+  <meta property="og:description" content="Find verified listings, compare prices, and connect instantly with an experienced property advisor." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" />
+  <meta property="og:url" content="https://example.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="S.S Enterprises | Premium Property Consultant" />
+  <meta name="twitter:description" content="Verified property listings and direct advisor support for homebuyers and investors." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" />
+  <link rel="canonical" href="https://example.com" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#0F172A',
+            gold: '#D4AF37',
+            slateglass: 'rgba(15, 23, 42, 0.7)'
+          },
+          boxShadow: {
+            glow: '0 20px 40px rgba(212, 175, 55, 0.18)'
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    :root {
+      --navy: #0F172A;
+      --gold: #D4AF37;
+      --ink: #1E293B;
+      --mist: #F8FAFC;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(circle at 85% 10%, rgba(212, 175, 55, 0.15), transparent 30%),
+                  radial-gradient(circle at 10% 90%, rgba(15, 23, 42, 0.18), transparent 32%),
+                  #f7f8fb;
+      color: var(--ink);
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      backdrop-filter: blur(8px);
+    }
+
+    .section-heading::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 3px;
+      margin-top: 10px;
+      background: linear-gradient(90deg, var(--gold), #f7dfa0);
+      border-radius: 999px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: all 700ms ease;
+    }
+
+    .reveal.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hero-grid {
+      background-image:
+        linear-gradient(115deg, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.58)),
+        url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      min-height: 88vh;
+    }
+
+    .property-image {
+      transition: transform 450ms ease;
+    }
+
+    .property-card:hover .property-image {
+      transform: scale(1.06);
+    }
+
+    .testimonial-track {
+      transition: transform 450ms ease;
+    }
+
+    .badge-gold {
+      background: rgba(212, 175, 55, 0.14);
+      color: #886500;
+      border: 1px solid rgba(212, 175, 55, 0.45);
+    }
+
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="antialiased">
+  <header class="fixed top-0 left-0 right-0 z-40 transition-all" id="mainHeader">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mt-4 rounded-2xl glass px-4 py-3 flex items-center justify-between shadow-lg">
+        <a href="#home" class="text-white font-extrabold tracking-wide text-lg">S.S ENTERPRISES</a>
+        <nav class="hidden md:flex items-center gap-6 text-sm text-white/90 font-medium">
+          <a href="#home" class="hover:text-gold transition">Home</a>
+          <a href="#properties" class="hover:text-gold transition">Properties</a>
+          <a href="#about" class="hover:text-gold transition">About</a>
+          <a href="#contact" class="hover:text-gold transition">Contact</a>
+        </nav>
+        <button id="openAdminBtn" class="bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:brightness-110 transition">Admin Portal</button>
+      </div>
+    </div>
+  </header>
+
+  <section id="home" class="hero-grid flex items-center pt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div class="max-w-3xl reveal">
+        <p class="text-gold uppercase tracking-[0.24em] text-xs sm:text-sm font-semibold">Trusted Real Estate Advisor</p>
+        <h1 class="text-white mt-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">Find Your Dream Home</h1>
+        <p class="text-white/85 mt-5 text-base sm:text-lg max-w-2xl">Explore curated listings across premium neighborhoods with transparent pricing, verified details, and direct consultation.</p>
+      </div>
+
+      <div class="mt-8 bg-white rounded-2xl p-4 sm:p-5 shadow-2xl reveal">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+          <select id="heroCity" class="border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gold">
+            <option value="">All Cities</option>
+          </select>
+          <select id="heroType" class="border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gold">
+            <option value="">Property Type</option>
+            <option value="Apartment">Apartment</option>
+            <option value="Villa">Villa</option>
+            <option value="Plot">Plot</option>
+            <option value="Commercial">Commercial</option>
+          </select>
+          <select id="heroBudget" class="border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gold">
+            <option value="">Any Budget</option>
+            <option value="0-3000000">Up to ₹30L</option>
+            <option value="3000000-6000000">₹30L - ₹60L</option>
+            <option value="6000000-10000000">₹60L - ₹1Cr</option>
+            <option value="10000000-999999999">₹1Cr+</option>
+          </select>
+          <select id="heroBhk" class="border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gold">
+            <option value="">Any BHK</option>
+            <option value="1">1 BHK</option>
+            <option value="2">2 BHK</option>
+            <option value="3">3 BHK</option>
+            <option value="4">4+ BHK</option>
+          </select>
+          <button id="heroSearchBtn" class="bg-navy text-white rounded-lg px-4 py-2 font-semibold hover:bg-slate-800 transition">Search</button>
+        </div>
+      </div>
+
+      <div class="mt-6 reveal">
+        <a href="#properties" class="inline-flex items-center gap-2 text-white border border-white/45 px-4 py-2 rounded-full hover:bg-white hover:text-navy transition">
+          Browse Properties
+          <span aria-hidden="true">↓</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section id="properties" class="py-16 sm:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row gap-7">
+          <aside class="w-full lg:w-72 bg-white p-5 rounded-2xl shadow-md h-fit sticky top-24 reveal">
+            <h2 class="text-xl font-bold section-heading text-navy">Filter Listings</h2>
+            <div class="mt-6 space-y-4">
+              <div>
+                <label class="text-sm font-medium text-slate-700">City</label>
+                <select id="filterCity" class="mt-1 w-full border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gold">
+                  <option value="">All Cities</option>
+                </select>
+              </div>
+              <div>
+                <label class="text-sm font-medium text-slate-700">Type</label>
+                <select id="filterType" class="mt-1 w-full border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gold">
+                  <option value="">All Types</option>
+                  <option value="Apartment">Apartment</option>
+                  <option value="Villa">Villa</option>
+                  <option value="Plot">Plot</option>
+                  <option value="Commercial">Commercial</option>
+                </select>
+              </div>
+              <div>
+                <label class="text-sm font-medium text-slate-700">Price Range</label>
+                <select id="filterBudget" class="mt-1 w-full border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gold">
+                  <option value="">Any</option>
+                  <option value="0-3000000">Up to ₹30L</option>
+                  <option value="3000000-6000000">₹30L - ₹60L</option>
+                  <option value="6000000-10000000">₹60L - ₹1Cr</option>
+                  <option value="10000000-999999999">₹1Cr+</option>
+                </select>
+              </div>
+              <div>
+                <label class="text-sm font-medium text-slate-700">BHK</label>
+                <select id="filterBhk" class="mt-1 w-full border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gold">
+                  <option value="">Any</option>
+                  <option value="1">1 BHK</option>
+                  <option value="2">2 BHK</option>
+                  <option value="3">3 BHK</option>
+                  <option value="4">4+ BHK</option>
+                </select>
+              </div>
+              <button id="resetFilters" class="w-full border border-slate-300 py-2 rounded-lg font-medium text-slate-700 hover:bg-slate-50 transition">Reset Filters</button>
+            </div>
+          </aside>
+
+          <div class="flex-1">
+            <div class="bg-white rounded-2xl p-4 sm:p-5 shadow-sm mb-5 reveal flex items-center justify-between gap-4 flex-wrap">
+              <p class="text-sm text-slate-600"><span id="listingCount" class="font-semibold text-slate-900">0</span> properties found</p>
+              <div class="flex items-center gap-2">
+                <label for="sortBy" class="text-sm text-slate-700">Sort by</label>
+                <select id="sortBy" class="border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gold">
+                  <option value="newest">Newest</option>
+                  <option value="low-high">Price: Low to High</option>
+                  <option value="high-low">Price: High to Low</option>
+                </select>
+              </div>
+            </div>
+
+            <div id="propertyGrid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6"></div>
+            <div id="noProperties" class="hidden mt-8 bg-white rounded-2xl p-8 text-center text-slate-600 shadow-sm">No properties match your current filters.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="py-16 sm:py-20 bg-navy text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          <div class="reveal">
+            <h2 class="text-3xl sm:text-4xl font-bold section-heading">About The Agent</h2>
+            <p class="mt-6 text-white/85 leading-relaxed">I am dedicated to helping families and investors find the right property with complete transparency. From first visit to final paperwork, every step is professionally managed for a smooth, trusted experience.</p>
+            <div class="mt-7 grid grid-cols-3 gap-4">
+              <div class="bg-white/8 rounded-xl p-4 text-center">
+                <p class="text-2xl font-extrabold text-gold counter" data-target="11">0</p>
+                <p class="text-xs uppercase tracking-wider text-white/75">Years Experience</p>
+              </div>
+              <div class="bg-white/8 rounded-xl p-4 text-center">
+                <p class="text-2xl font-extrabold text-gold counter" data-target="245">0</p>
+                <p class="text-xs uppercase tracking-wider text-white/75">Deals Closed</p>
+              </div>
+              <div class="bg-white/8 rounded-xl p-4 text-center">
+                <p class="text-2xl font-extrabold text-gold counter" data-target="9">0</p>
+                <p class="text-xs uppercase tracking-wider text-white/75">Cities Covered</p>
+              </div>
+            </div>
+            <div class="mt-7 flex flex-wrap gap-3 text-xs sm:text-sm">
+              <span class="badge-gold px-3 py-1 rounded-full">RERA Compliant</span>
+              <span class="badge-gold px-3 py-1 rounded-full">Verified Listings</span>
+              <span class="badge-gold px-3 py-1 rounded-full">End-to-End Support</span>
+            </div>
+          </div>
+          <div class="reveal">
+            <div class="bg-gradient-to-br from-slate-200 to-white rounded-2xl shadow-2xl p-6">
+              <div class="aspect-[4/3] rounded-xl bg-slate-200 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=900&q=80" alt="Agent profile" loading="lazy" class="w-full h-full object-cover" />
+              </div>
+              <h3 id="aboutAgentName" class="mt-5 text-2xl font-bold text-navy"></h3>
+              <p class="text-slate-600 mt-1" id="aboutAgentCity"></p>
+              <p class="mt-4 text-slate-700">Your reliable partner for residential and investment properties with negotiation expertise and local market insight.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="py-16 sm:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-end justify-between gap-4 flex-wrap reveal">
+          <div>
+            <h2 class="text-3xl sm:text-4xl font-bold section-heading text-navy">What Clients Say</h2>
+            <p class="text-slate-600 mt-4">Stories from buyers and sellers who trusted our process.</p>
+          </div>
+          <div class="flex gap-2">
+            <button id="testiPrev" class="border border-slate-300 rounded-lg px-3 py-2 hover:bg-slate-100">←</button>
+            <button id="testiNext" class="border border-slate-300 rounded-lg px-3 py-2 hover:bg-slate-100">→</button>
+          </div>
+        </div>
+
+        <div class="overflow-hidden mt-8 reveal">
+          <div id="testimonialTrack" class="testimonial-track flex gap-5">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-16 sm:py-20 bg-gradient-to-r from-navy to-slate-900 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div class="reveal">
+            <h2 class="text-3xl sm:text-4xl font-bold section-heading">Book A Consultation</h2>
+            <p class="mt-5 text-white/85">Share your requirements and receive tailored property options within 24 hours.</p>
+            <div class="mt-8 space-y-3">
+              <p><span class="text-gold font-semibold">Phone:</span> <a id="contactPhone" href="#" class="underline hover:text-gold"></a></p>
+              <p><span class="text-gold font-semibold">Email:</span> <a id="contactEmail" href="#" class="underline hover:text-gold"></a></p>
+              <p><span class="text-gold font-semibold">Address:</span> <span id="contactCity"></span></p>
+            </div>
+          </div>
+
+          <form id="leadForm" class="bg-white text-slate-900 rounded-2xl p-6 shadow-2xl reveal">
+            <input type="text" name="website" id="leadHoney" class="hidden" tabindex="-1" autocomplete="off" />
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="text-sm font-medium">Name</label>
+                <input required name="name" type="text" class="mt-1 w-full border border-slate-200 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-gold" />
+              </div>
+              <div>
+                <label class="text-sm font-medium">Phone</label>
+                <input required name="phone" inputmode="numeric" pattern="[0-9+\-\s]{10,16}" type="tel" class="mt-1 w-full border border-slate-200 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-gold" />
+              </div>
+              <div>
+                <label class="text-sm font-medium">Email</label>
+                <input required name="email" type="email" class="mt-1 w-full border border-slate-200 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-gold" />
+              </div>
+              <div>
+                <label class="text-sm font-medium">Property Interest</label>
+                <input required name="interest" type="text" placeholder="2 BHK in Mathura" class="mt-1 w-full border border-slate-200 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-gold" />
+              </div>
+            </div>
+            <div class="mt-4">
+              <label class="text-sm font-medium">Message</label>
+              <textarea required name="message" rows="4" class="mt-1 w-full border border-slate-200 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-gold"></textarea>
+            </div>
+            <label class="mt-4 flex items-start gap-2 text-sm text-slate-700">
+              <input required id="leadConsent" type="checkbox" class="mt-1" />
+              <span>I consent to be contacted by phone, WhatsApp, or email regarding property updates and offers.</span>
+            </label>
+            <button class="mt-5 w-full bg-navy text-white py-3 rounded-lg font-semibold hover:bg-slate-800 transition">Submit Enquiry</button>
+            <p id="leadSuccess" class="hidden mt-4 rounded-lg bg-green-100 text-green-700 px-3 py-2 text-sm">Thank you! Your enquiry has been received successfully.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-navy text-white py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div>
+          <h3 class="font-extrabold text-gold text-xl">S.S ENTERPRISES</h3>
+          <p class="text-white/80 mt-2">Premium real estate advisory for homes, investments, and commercial opportunities.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-3">Quick Links</h4>
+          <div class="space-y-2 text-white/85 text-sm">
+            <a href="#home" class="block hover:text-gold">Home</a>
+            <a href="#properties" class="block hover:text-gold">Properties</a>
+            <a href="#about" class="block hover:text-gold">About</a>
+            <a href="#contact" class="block hover:text-gold">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-3">Connect</h4>
+          <div class="space-y-2 text-sm text-white/85">
+            <a id="instagramLink" href="#" target="_blank" rel="noopener" class="flex items-center gap-2 hover:text-gold">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.75 2h8.5A5.76 5.76 0 0 1 22 7.75v8.5A5.76 5.76 0 0 1 16.25 22h-8.5A5.76 5.76 0 0 1 2 16.25v-8.5A5.76 5.76 0 0 1 7.75 2zm0 1.8A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95h-8.5zm8.95 1.4a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.8A3.2 3.2 0 1 0 12 15.2 3.2 3.2 0 0 0 12 8.8z"/></svg>
+              <span>Instagram</span>
+            </a>
+            <a id="whatsappLink" href="#" target="_blank" rel="noopener" class="flex items-center gap-2 hover:text-gold">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.84 11.84 0 0 0 12.1 0C5.45 0 .04 5.4.04 12.06c0 2.13.56 4.22 1.62 6.06L0 24l6.07-1.59a12.05 12.05 0 0 0 6.03 1.64h.01c6.65 0 12.06-5.4 12.06-12.06a11.96 11.96 0 0 0-3.65-8.51zm-8.41 18.5h-.01a9.97 9.97 0 0 1-5.08-1.39l-.37-.22-3.6.94.96-3.5-.24-.36a9.95 9.95 0 0 1-1.53-5.35c0-5.5 4.48-9.98 9.99-9.98 2.67 0 5.17 1.04 7.05 2.92a9.9 9.9 0 0 1 2.93 7.06c0 5.5-4.48 9.98-9.99 9.98zm5.47-7.47c-.3-.15-1.77-.87-2.05-.97-.27-.1-.46-.15-.66.15-.2.3-.76.96-.94 1.16-.17.2-.34.23-.64.08-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.64-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.34.45-.5.15-.17.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.66-1.58-.9-2.17-.24-.57-.49-.49-.66-.49h-.57c-.2 0-.53.08-.8.38-.27.3-1.04 1.01-1.04 2.46s1.06 2.85 1.2 3.05c.15.2 2.09 3.2 5.06 4.49.71.31 1.27.49 1.7.63.72.23 1.38.2 1.9.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.31.17-1.43-.07-.12-.27-.2-.57-.35z"/></svg>
+              <span>WhatsApp</span>
+            </a>
+            <a id="footerEmail" href="#" class="flex items-center gap-2 hover:text-gold">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v.35L12 12 3 5.35V5zm0 2.85V19a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7.85l-8.4 6.2a1 1 0 0 1-1.2 0L3 7.85z"/></svg>
+              <span>Email</span>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-3">Contact</h4>
+          <a id="footerPhone" href="#" class="text-white/85 hover:text-gold"></a>
+          <p id="footerAddress" class="text-white/80 mt-2"></p>
+          <p class="text-xs text-white/65 mt-3">All property information is subject to availability and final verification.</p>
+        </div>
+      </div>
+      <div class="mt-5 flex flex-wrap gap-4 text-xs text-white/70">
+        <button data-legal="privacy" class="legal-open hover:text-gold">Privacy Policy</button>
+        <button data-legal="terms" class="legal-open hover:text-gold">Terms of Use</button>
+        <button data-legal="disclaimer" class="legal-open hover:text-gold">Disclaimer</button>
+      </div>
+      <p class="mt-8 pt-5 border-t border-white/15 text-sm text-white/70">© <span id="copyYear"></span> S.S Enterprises. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <a id="floatingWhatsapp" href="#" target="_blank" rel="noopener" class="fixed bottom-5 right-5 z-50 bg-green-500 text-white px-4 py-3 rounded-full shadow-xl font-semibold hover:scale-105 transition flex items-center gap-2"><span>WhatsApp</span><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.84 11.84 0 0 0 12.1 0C5.45 0 .04 5.4.04 12.06c0 2.13.56 4.22 1.62 6.06L0 24l6.07-1.59a12.05 12.05 0 0 0 6.03 1.64h.01c6.65 0 12.06-5.4 12.06-12.06a11.96 11.96 0 0 0-3.65-8.51zm-8.41 18.5h-.01a9.97 9.97 0 0 1-5.08-1.39l-.37-.22-3.6.94.96-3.5-.24-.36a9.95 9.95 0 0 1-1.53-5.35c0-5.5 4.48-9.98 9.99-9.98 2.67 0 5.17 1.04 7.05 2.92a9.9 9.9 0 0 1 2.93 7.06c0 5.5-4.48 9.98-9.99 9.98z"/></svg></a>
+
+  <div id="propertyModal" class="fixed inset-0 bg-black/70 z-[60] hidden items-center justify-center p-4">
+    <div class="bg-white rounded-2xl w-full max-w-5xl max-h-[92vh] overflow-auto">
+      <div class="p-4 sm:p-6 border-b border-slate-200 flex items-center justify-between sticky top-0 bg-white z-10">
+        <h3 id="modalTitle" class="text-xl sm:text-2xl font-bold text-navy"></h3>
+        <button id="closePropertyModal" class="text-slate-600 hover:text-slate-900 text-xl">✕</button>
+      </div>
+      <div class="p-4 sm:p-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div class="lg:col-span-2">
+          <div class="relative rounded-xl overflow-hidden bg-slate-100 aspect-[16/10]">
+            <img id="modalMainImage" src="" alt="Property image" class="w-full h-full object-cover" />
+            <button id="modalPrevImage" class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/80 rounded-full px-3 py-2 hover:bg-white">←</button>
+            <button id="modalNextImage" class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/80 rounded-full px-3 py-2 hover:bg-white">→</button>
+          </div>
+          <div id="modalThumbs" class="mt-3 flex gap-2 overflow-x-auto scrollbar-hide"></div>
+          <p id="modalDescription" class="mt-5 text-slate-700 leading-relaxed"></p>
+
+          <h4 class="font-semibold mt-5 mb-2">Amenities</h4>
+          <div id="modalAmenities" class="flex flex-wrap gap-2"></div>
+
+          <h4 class="font-semibold mt-6 mb-2">Location Map</h4>
+          <div class="rounded-xl border border-dashed border-slate-300 h-40 flex items-center justify-center text-slate-500 text-sm">Map embed placeholder</div>
+        </div>
+
+        <div>
+          <div class="bg-slate-50 rounded-xl p-4 border border-slate-200">
+            <p class="text-sm text-slate-500">Location</p>
+            <p id="modalLocation" class="font-semibold text-slate-800"></p>
+            <p class="text-sm text-slate-500 mt-3">Price</p>
+            <p id="modalPrice" class="text-xl font-bold text-navy"></p>
+            <p class="text-sm text-slate-500 mt-3">Area</p>
+            <p id="modalArea" class="font-medium"></p>
+          </div>
+
+          <div class="mt-4 rounded-xl border border-slate-200 p-4">
+            <div class="flex items-center gap-3">
+              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&q=80" alt="Agent" class="w-14 h-14 rounded-full object-cover" />
+              <div>
+                <p id="agentCardName" class="font-semibold text-slate-900"></p>
+                <p class="text-sm text-slate-500">Property Advisor</p>
+              </div>
+            </div>
+            <div class="mt-4 space-y-2">
+              <a id="callNowBtn" href="#" class="block text-center bg-navy text-white py-2 rounded-lg font-medium hover:bg-slate-800">Call Now</a>
+              <a id="modalWhatsappBtn" href="#" target="_blank" rel="noopener" class="block text-center bg-green-500 text-white py-2 rounded-lg font-medium hover:bg-green-600">WhatsApp</a>
+              <a id="modalEmailBtn" href="#" class="block text-center border border-slate-300 py-2 rounded-lg font-medium text-slate-700 hover:bg-slate-100">Email</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="adminModal" class="fixed inset-0 bg-black/70 z-[70] hidden items-center justify-center p-4">
+    <div class="bg-white rounded-2xl w-full max-w-6xl max-h-[92vh] overflow-auto">
+      <div class="p-4 sm:p-5 border-b border-slate-200 flex items-center justify-between sticky top-0 bg-white z-20">
+        <h3 class="text-xl font-bold text-navy">Admin Portal</h3>
+        <button id="closeAdminModal" class="text-slate-600 hover:text-slate-900 text-xl">✕</button>
+      </div>
+
+      <div id="adminLoginView" class="p-6 sm:p-8">
+        <div class="max-w-md mx-auto border border-slate-200 rounded-xl p-6">
+          <h4 class="text-lg font-bold text-navy">Secure Login</h4>
+          <p class="text-sm text-slate-600 mt-1">Enter admin password to access dashboard.</p>
+          <input id="adminPasswordInput" type="password" placeholder="Password" class="mt-4 w-full border border-slate-200 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-gold" />
+          <button id="adminLoginBtn" class="mt-4 w-full bg-navy text-white py-2 rounded-lg font-semibold hover:bg-slate-800">Login</button>
+          <p id="adminError" class="hidden mt-3 text-sm text-red-600">Invalid password.</p>
+        </div>
+      </div>
+
+      <div id="adminDashboardView" class="hidden p-4 sm:p-6 space-y-6">
+        <div class="flex justify-between items-center flex-wrap gap-3">
+          <h4 class="text-xl font-bold text-navy">Dashboard</h4>
+          <div class="flex items-center gap-2">
+            <button id="addNewPropertyBtn" class="bg-navy text-white px-4 py-2 rounded-lg font-semibold hover:bg-slate-800">Add New Property</button>
+            <button id="adminLogoutBtn" class="border border-slate-300 px-4 py-2 rounded-lg text-slate-700 hover:bg-slate-100">Logout</button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-4">
+            <p class="text-sm text-slate-500">Total Properties</p>
+            <p id="statTotal" class="text-2xl font-bold text-navy">0</p>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-4">
+            <p class="text-sm text-slate-500">Active Listings</p>
+            <p id="statActive" class="text-2xl font-bold text-navy">0</p>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-4">
+            <p class="text-sm text-slate-500">Enquiries</p>
+            <p id="statEnquiries" class="text-2xl font-bold text-navy">0</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <div class="border border-slate-200 rounded-xl p-4">
+            <h5 class="font-semibold text-navy mb-3">Lead Tools</h5>
+            <div class="flex flex-wrap gap-2">
+              <button id="exportLeadsBtn" class="bg-navy text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-slate-800">Download Leads CSV</button>
+              <button id="clearLeadsBtn" class="border border-red-300 text-red-700 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-red-50">Clear Leads</button>
+            </div>
+          </div>
+          <div class="border border-slate-200 rounded-xl p-4">
+            <h5 class="font-semibold text-navy mb-3">Recent Enquiries</h5>
+            <div class="overflow-x-auto">
+              <table class="w-full text-sm min-w-[420px]">
+                <thead>
+                  <tr class="text-left border-b border-slate-200 text-slate-600">
+                    <th class="pb-2">Name</th>
+                    <th class="pb-2">Phone</th>
+                    <th class="pb-2">Interest</th>
+                    <th class="pb-2">Date</th>
+                  </tr>
+                </thead>
+                <tbody id="leadsTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div id="propertyFormPanel" class="border border-slate-200 rounded-xl p-4 sm:p-5">
+          <div class="flex items-center justify-between mb-4">
+            <h5 class="font-semibold text-navy">Add / Edit Property</h5>
+            <button id="clearPropertyForm" class="text-sm border border-slate-300 px-3 py-1 rounded-md hover:bg-slate-100">Clear Form</button>
+          </div>
+
+          <form id="propertyForm" class="space-y-4">
+            <input type="hidden" id="editPropertyId" />
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div>
+                <label class="text-sm font-medium">Title</label>
+                <input required id="pTitle" class="mt-1 w-full border border-slate-200 rounded-lg px-3 py-2" />
+              </div>
+              <div>
+                <label class="text-sm font-medium">City</label>
+                <input required id="pCity" class="mt-1 w-full border border-slate-200 rounded-lg px-3 py-2" />
+              </div>
+              <div>
+                <label class="text-sm font-medium">Location</label>
+                <input required id="pLocation" class="mt-1 w-full border border-slate-200 rounded-lg px-3 py-2" />
+              </div>
+              <div>
+                <label class="text-sm font-medium">Price (₹)</label>
+                <input required id="pPrice" type="number" min="0" class="mt-1 w-full border border-slate-200 rounded-lg px-3 py-2" />
+              </div>
+              <div>
+                <label class="text-sm font-medium">Type</label>
+                <select id="pType" class="mt-1 w-full border border-slate-200 rounded-lg px-3 py-2">
+                  <option>Apartment</option>
+                  <option>Villa</option>
+                  <option>Plot</option>
+                  <option>Commercial</option>
+                </select>
+              </div>
+              <div>
+                <label class="text-sm font-medium">BHK</label>
+                <select id="pBhk" class="mt-1 w-full border border-slate-200 rounded-lg px-3 py-2">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4+</option>
+                </select>
+              </div>
+              <div>
+                <label class="text-sm font-medium">Area (sqft)</label>
+                <input required id="pArea" type="number" min="0" class="mt-1 w-full border border-slate-200 rounded-lg px-3 py-2" />
+              </div>
+              <div>
+                <label class="text-sm font-medium">Status</label>
+                <select id="pStatus" class="mt-1 w-full border border-slate-200 rounded-lg px-3 py-2">
+                  <option>Active</option>
+                  <option>Sold</option>
+                  <option>Rented</option>
+                </select>
+              </div>
+              <div>
+                <label class="text-sm font-medium">Images (Max 5)</label>
+                <input id="pImages" type="file" accept="image/*" multiple class="mt-1 w-full border border-slate-200 rounded-lg px-3 py-2" />
+                <p class="text-xs text-slate-500 mt-1">Selected: <span id="imageCount">0</span> images</p>
+              </div>
+            </div>
+
+            <div>
+              <label class="text-sm font-medium">Description</label>
+              <textarea required id="pDescription" rows="3" class="mt-1 w-full border border-slate-200 rounded-lg px-3 py-2"></textarea>
+            </div>
+
+            <div>
+              <p class="text-sm font-medium mb-2">Amenities</p>
+              <div class="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm text-slate-700">
+                <label><input class="amenity-checkbox mr-2" type="checkbox" value="Parking">Parking</label>
+                <label><input class="amenity-checkbox mr-2" type="checkbox" value="Gym">Gym</label>
+                <label><input class="amenity-checkbox mr-2" type="checkbox" value="Pool">Pool</label>
+                <label><input class="amenity-checkbox mr-2" type="checkbox" value="Security">Security</label>
+                <label><input class="amenity-checkbox mr-2" type="checkbox" value="Lift">Lift</label>
+                <label><input class="amenity-checkbox mr-2" type="checkbox" value="Club House">Club House</label>
+                <label><input class="amenity-checkbox mr-2" type="checkbox" value="Garden">Garden</label>
+                <label><input class="amenity-checkbox mr-2" type="checkbox" value="Power Backup">Power Backup</label>
+              </div>
+            </div>
+
+            <button class="bg-navy text-white py-2 px-6 rounded-lg font-semibold hover:bg-slate-800">Save Property</button>
+          </form>
+        </div>
+
+        <div class="border border-slate-200 rounded-xl p-4 sm:p-5">
+          <h5 class="font-semibold text-navy mb-4">Manage Listings</h5>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm min-w-[760px]">
+              <thead>
+                <tr class="text-left border-b border-slate-200 text-slate-600">
+                  <th class="pb-3">Title</th>
+                  <th class="pb-3">City</th>
+                  <th class="pb-3">Price</th>
+                  <th class="pb-3">Status</th>
+                  <th class="pb-3">Active</th>
+                  <th class="pb-3">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="adminTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="legalModal" class="fixed inset-0 bg-black/70 z-[75] hidden items-center justify-center p-4">
+    <div class="bg-white rounded-2xl w-full max-w-2xl max-h-[85vh] overflow-auto">
+      <div class="p-4 border-b border-slate-200 flex items-center justify-between sticky top-0 bg-white">
+        <h3 id="legalModalTitle" class="text-lg font-bold text-navy"></h3>
+        <button id="closeLegalModal" class="text-slate-600 hover:text-slate-900 text-xl">✕</button>
+      </div>
+      <div id="legalModalBody" class="p-5 text-slate-700 text-sm leading-relaxed"></div>
+    </div>
+  </div>
+
+  <script>
+    const CONFIG = {
+      agentName: "Rajesh Kumar",
+      phone: "+91-7078542301",
+      whatsapp: "917078542301",
+      email: "SS.Koffice23@gmail.com",
+      instagram: "https://instagram.com/YOURUSERNAME",
+      city: "Mathura, UP",
+      address: "40 Foota Road, Tomar Choraya, Mathura, UP",
+      adminPassword: "Naitik@123"
+    };
+
+    const STORAGE_KEYS = {
+      properties: 'rk_estates_properties',
+      enquiries: 'rk_estates_enquiries',
+      adminSession: 'rk_estates_admin_session',
+      leads: 'rk_estates_leads'
+    };
+
+    const PLACEHOLDER_IMAGE = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700"><defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="%230f172a"/><stop offset="1" stop-color="%23334155"/></linearGradient></defs><rect width="1200" height="700" fill="url(%23g)"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="52" fill="%23d4af37">Property Image</text></svg>';
+
+    const defaultProperties = [
+      {
+        id: crypto.randomUUID(),
+        title: 'Golden Residency Heights',
+        city: 'Mathura',
+        location: 'Vrindavan Road, Mathura',
+        price: 4500000,
+        type: 'Apartment',
+        bhk: '2',
+        area: 1260,
+        description: 'A thoughtfully designed 2 BHK apartment in a gated community with landscaped gardens and easy access to schools and markets.',
+        amenities: ['Parking', 'Lift', 'Security', 'Power Backup', 'Gym'],
+        status: 'Active',
+        isActive: true,
+        createdAt: Date.now() - 300000,
+        images: [
+          'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1400&q=80',
+          'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=80'
+        ]
+      },
+      {
+        id: crypto.randomUUID(),
+        title: 'Emerald Villa Estate',
+        city: 'Agra',
+        location: 'Fatehabad Road, Agra',
+        price: 12500000,
+        type: 'Villa',
+        bhk: '4',
+        area: 3050,
+        description: 'Luxury 4 BHK villa featuring private lawn space, double-height living area, and premium finish for elegant family living.',
+        amenities: ['Parking', 'Pool', 'Garden', 'Security', 'Club House'],
+        status: 'Active',
+        isActive: true,
+        createdAt: Date.now() - 100000,
+        images: [
+          'https://images.unsplash.com/photo-1613977257360-707ba9348227?auto=format&fit=crop&w=1400&q=80',
+          'https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=1400&q=80'
+        ]
+      },
+      {
+        id: crypto.randomUUID(),
+        title: 'Urban Commerce Hub',
+        city: 'Noida',
+        location: 'Sector 62, Noida',
+        price: 8900000,
+        type: 'Commercial',
+        bhk: '1',
+        area: 1800,
+        description: 'Strategic commercial property ideal for office setup with excellent road connectivity and nearby metro access.',
+        amenities: ['Parking', 'Lift', 'Security', 'Power Backup'],
+        status: 'Active',
+        isActive: true,
+        createdAt: Date.now() - 200000,
+        images: [
+          'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=80'
+        ]
+      }
+    ];
+
+    const testimonials = [
+      {
+        name: 'Ankit Sharma',
+        text: 'Highly professional service. Every detail from site visit to registration was handled smoothly. Truly reliable advisor.',
+        city: 'Mathura'
+      },
+      {
+        name: 'Pooja Verma',
+        text: 'Found the exact apartment we needed within our budget. Transparent pricing and genuine market guidance.',
+        city: 'Agra'
+      },
+      {
+        name: 'Rahul Singhal',
+        text: 'Excellent support during commercial investment purchase. Negotiation and paperwork management were top-notch.',
+        city: 'Noida'
+      },
+      {
+        name: 'Neha Kapoor',
+        text: 'Friendly, patient, and very knowledgeable. We shortlisted quickly and closed the deal confidently.',
+        city: 'Vrindavan'
+      }
+    ];
+
+    const state = {
+      properties: [],
+      filtered: [],
+      activeModalProperty: null,
+      activeModalImageIndex: 0,
+      pendingImages: [],
+      testimonialIndex: 0
+    };
+
+    const el = {
+      heroCity: document.getElementById('heroCity'),
+      heroType: document.getElementById('heroType'),
+      heroBudget: document.getElementById('heroBudget'),
+      heroBhk: document.getElementById('heroBhk'),
+      heroSearchBtn: document.getElementById('heroSearchBtn'),
+      filterCity: document.getElementById('filterCity'),
+      filterType: document.getElementById('filterType'),
+      filterBudget: document.getElementById('filterBudget'),
+      filterBhk: document.getElementById('filterBhk'),
+      resetFilters: document.getElementById('resetFilters'),
+      sortBy: document.getElementById('sortBy'),
+      propertyGrid: document.getElementById('propertyGrid'),
+      noProperties: document.getElementById('noProperties'),
+      listingCount: document.getElementById('listingCount'),
+      propertyModal: document.getElementById('propertyModal'),
+      modalTitle: document.getElementById('modalTitle'),
+      modalMainImage: document.getElementById('modalMainImage'),
+      modalPrevImage: document.getElementById('modalPrevImage'),
+      modalNextImage: document.getElementById('modalNextImage'),
+      modalThumbs: document.getElementById('modalThumbs'),
+      modalDescription: document.getElementById('modalDescription'),
+      modalAmenities: document.getElementById('modalAmenities'),
+      modalLocation: document.getElementById('modalLocation'),
+      modalPrice: document.getElementById('modalPrice'),
+      modalArea: document.getElementById('modalArea'),
+      closePropertyModal: document.getElementById('closePropertyModal'),
+      callNowBtn: document.getElementById('callNowBtn'),
+      modalWhatsappBtn: document.getElementById('modalWhatsappBtn'),
+      modalEmailBtn: document.getElementById('modalEmailBtn'),
+      agentCardName: document.getElementById('agentCardName'),
+      aboutAgentName: document.getElementById('aboutAgentName'),
+      aboutAgentCity: document.getElementById('aboutAgentCity'),
+      contactPhone: document.getElementById('contactPhone'),
+      contactEmail: document.getElementById('contactEmail'),
+      contactCity: document.getElementById('contactCity'),
+      instagramLink: document.getElementById('instagramLink'),
+      whatsappLink: document.getElementById('whatsappLink'),
+      footerEmail: document.getElementById('footerEmail'),
+      footerPhone: document.getElementById('footerPhone'),
+      footerAddress: document.getElementById('footerAddress'),
+      floatingWhatsapp: document.getElementById('floatingWhatsapp'),
+      leadForm: document.getElementById('leadForm'),
+      leadSuccess: document.getElementById('leadSuccess'),
+      testimonialTrack: document.getElementById('testimonialTrack'),
+      testiPrev: document.getElementById('testiPrev'),
+      testiNext: document.getElementById('testiNext'),
+      copyYear: document.getElementById('copyYear'),
+      openAdminBtn: document.getElementById('openAdminBtn'),
+      adminModal: document.getElementById('adminModal'),
+      closeAdminModal: document.getElementById('closeAdminModal'),
+      adminLoginView: document.getElementById('adminLoginView'),
+      adminDashboardView: document.getElementById('adminDashboardView'),
+      adminPasswordInput: document.getElementById('adminPasswordInput'),
+      adminLoginBtn: document.getElementById('adminLoginBtn'),
+      adminError: document.getElementById('adminError'),
+      addNewPropertyBtn: document.getElementById('addNewPropertyBtn'),
+      adminLogoutBtn: document.getElementById('adminLogoutBtn'),
+      statTotal: document.getElementById('statTotal'),
+      statActive: document.getElementById('statActive'),
+      statEnquiries: document.getElementById('statEnquiries'),
+      exportLeadsBtn: document.getElementById('exportLeadsBtn'),
+      clearLeadsBtn: document.getElementById('clearLeadsBtn'),
+      leadsTableBody: document.getElementById('leadsTableBody'),
+      propertyFormPanel: document.getElementById('propertyFormPanel'),
+      propertyForm: document.getElementById('propertyForm'),
+      editPropertyId: document.getElementById('editPropertyId'),
+      pTitle: document.getElementById('pTitle'),
+      pCity: document.getElementById('pCity'),
+      pLocation: document.getElementById('pLocation'),
+      pPrice: document.getElementById('pPrice'),
+      pType: document.getElementById('pType'),
+      pBhk: document.getElementById('pBhk'),
+      pArea: document.getElementById('pArea'),
+      pStatus: document.getElementById('pStatus'),
+      pImages: document.getElementById('pImages'),
+      imageCount: document.getElementById('imageCount'),
+      pDescription: document.getElementById('pDescription'),
+      adminTableBody: document.getElementById('adminTableBody'),
+      clearPropertyForm: document.getElementById('clearPropertyForm'),
+      legalModal: document.getElementById('legalModal'),
+      legalModalTitle: document.getElementById('legalModalTitle'),
+      legalModalBody: document.getElementById('legalModalBody'),
+      closeLegalModal: document.getElementById('closeLegalModal')
+    };
+
+    const legalContent = {
+      privacy: {
+        title: 'Privacy Policy',
+        body: `
+          <p>We collect only the information you submit voluntarily in enquiry forms, including name, phone, email, and property preference.</p>
+          <p class="mt-3">Your information is used only for property consultation, follow-up communication, and service improvement. We do not sell your data to third parties.</p>
+          <p class="mt-3">For any privacy request, contact us at ${CONFIG.email} or call ${CONFIG.phone}.</p>
+        `
+      },
+      terms: {
+        title: 'Terms of Use',
+        body: `
+          <p>All listings, prices, and availability displayed on this website are indicative and may change without prior notice.</p>
+          <p class="mt-3">Site content is for informational purposes and does not constitute a legal offer. Final terms are confirmed during documentation.</p>
+          <p class="mt-3">By using this website, you agree to contact only for legitimate property transactions.</p>
+        `
+      },
+      disclaimer: {
+        title: 'Disclaimer',
+        body: `
+          <p>Property photos may include representative visuals. Actual unit view, area, and amenities can vary by project and builder updates.</p>
+          <p class="mt-3">S.S Enterprises assists with advisory and facilitation. Registration, taxation, and legal compliance should be verified through official documents.</p>
+        `
+      }
+    };
+
+    function formatINR(value) {
+      return new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(Number(value || 0));
+    }
+
+    function getEnquiriesCount() {
+      const leads = readLeads();
+      if (leads.length) return leads.length;
+      return Number(localStorage.getItem(STORAGE_KEYS.enquiries) || '0');
+    }
+
+    function setEnquiriesCount(count) {
+      localStorage.setItem(STORAGE_KEYS.enquiries, String(count));
+    }
+
+    function readLeads() {
+      const stored = localStorage.getItem(STORAGE_KEYS.leads);
+      if (!stored) return [];
+
+      try {
+        const parsed = JSON.parse(stored);
+        return Array.isArray(parsed) ? parsed : [];
+      } catch {
+        return [];
+      }
+    }
+
+    function writeLeads(leads) {
+      localStorage.setItem(STORAGE_KEYS.leads, JSON.stringify(leads));
+    }
+
+    function sanitizePhoneNumber(phone) {
+      return String(phone || '').replace(/[^+\d]/g, '');
+    }
+
+    function downloadTextFile(filename, text) {
+      const blob = new Blob([text], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+
+    function toCSVValue(value) {
+      const clean = String(value ?? '').replace(/"/g, '""');
+      return `"${clean}"`;
+    }
+
+    function exportLeadsCSV() {
+      const leads = readLeads();
+      if (!leads.length) {
+        alert('No leads available to export.');
+        return;
+      }
+
+      const headers = ['Date', 'Name', 'Phone', 'Email', 'Interest', 'Message'];
+      const rows = leads.map(lead => [
+        new Date(lead.createdAt).toLocaleString('en-IN'),
+        lead.name,
+        lead.phone,
+        lead.email,
+        lead.interest,
+        lead.message
+      ]);
+      const csv = [headers, ...rows].map(row => row.map(toCSVValue).join(',')).join('\n');
+      const stamp = new Date().toISOString().slice(0, 10);
+      downloadTextFile(`ss-enterprises-leads-${stamp}.csv`, csv);
+    }
+
+    function renderRecentLeads() {
+      const leads = readLeads().slice(0, 6);
+      if (!leads.length) {
+        el.leadsTableBody.innerHTML = '<tr><td colspan="4" class="py-3 text-slate-500">No enquiries yet.</td></tr>';
+        return;
+      }
+
+      el.leadsTableBody.innerHTML = leads.map(lead => `
+        <tr class="border-b border-slate-100">
+          <td class="py-2 pr-2">${lead.name}</td>
+          <td class="py-2 pr-2"><a href="tel:${sanitizePhoneNumber(lead.phone)}" class="text-blue-700 hover:underline">${lead.phone}</a></td>
+          <td class="py-2 pr-2">${lead.interest}</td>
+          <td class="py-2">${new Date(lead.createdAt).toLocaleDateString('en-IN')}</td>
+        </tr>
+      `).join('');
+    }
+
+    function clearLeads() {
+      const confirmed = confirm('Clear all enquiry records? This cannot be undone.');
+      if (!confirmed) return;
+      writeLeads([]);
+      setEnquiriesCount(0);
+      renderAdminStats();
+      renderRecentLeads();
+    }
+
+    function openLegalModal(type) {
+      const content = legalContent[type];
+      if (!content) return;
+      el.legalModalTitle.textContent = content.title;
+      el.legalModalBody.innerHTML = content.body;
+      el.legalModal.classList.remove('hidden');
+      el.legalModal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLegalModal() {
+      el.legalModal.classList.add('hidden');
+      el.legalModal.classList.remove('flex');
+      if (el.propertyModal.classList.contains('hidden') && el.adminModal.classList.contains('hidden')) {
+        document.body.style.overflow = '';
+      }
+    }
+
+    function injectStructuredData() {
+      const old = document.getElementById('ld-real-estate');
+      if (old) old.remove();
+
+      const data = {
+        '@context': 'https://schema.org',
+        '@type': 'RealEstateAgent',
+        name: 'S.S Enterprises',
+        image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
+        areaServed: CONFIG.city,
+        telephone: CONFIG.phone,
+        email: CONFIG.email,
+        url: window.location.href,
+        sameAs: [CONFIG.instagram, `https://wa.me/${CONFIG.whatsapp}`],
+        contactPoint: {
+          '@type': 'ContactPoint',
+          telephone: CONFIG.phone,
+          contactType: 'sales',
+          areaServed: 'IN',
+          availableLanguage: ['English', 'Hindi']
+        }
+      };
+
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.id = 'ld-real-estate';
+      script.textContent = JSON.stringify(data);
+      document.head.appendChild(script);
+    }
+
+    function readProperties() {
+      const stored = localStorage.getItem(STORAGE_KEYS.properties);
+      if (!stored) {
+        localStorage.setItem(STORAGE_KEYS.properties, JSON.stringify(defaultProperties));
+        return [...defaultProperties];
+      }
+
+      try {
+        const parsed = JSON.parse(stored);
+        if (!Array.isArray(parsed)) return [...defaultProperties];
+        return parsed;
+      } catch {
+        return [...defaultProperties];
+      }
+    }
+
+    function writeProperties(props) {
+      localStorage.setItem(STORAGE_KEYS.properties, JSON.stringify(props));
+    }
+
+    function parseBudgetRange(value) {
+      if (!value) return null;
+      const [min, max] = value.split('-').map(Number);
+      return { min, max };
+    }
+
+    function getPrimaryImage(property) {
+      return property.images && property.images.length ? property.images[0] : PLACEHOLDER_IMAGE;
+    }
+
+    function createWhatsAppLink(message) {
+      const requiredInfoLine = ' Kindly let me know what details or documents are required from my side so that I can provide all the necessary information accordingly.';
+      return `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(`${message}${requiredInfoLine}`)}`;
+    }
+
+    function applyConfig() {
+      el.aboutAgentName.textContent = CONFIG.agentName;
+      el.aboutAgentCity.textContent = CONFIG.city;
+      el.contactPhone.textContent = CONFIG.phone;
+      el.contactPhone.href = `tel:${CONFIG.phone.replace(/[^+\d]/g, '')}`;
+      el.contactEmail.textContent = CONFIG.email;
+      el.contactEmail.href = `mailto:${CONFIG.email}`;
+      el.contactCity.textContent = CONFIG.address || CONFIG.city;
+      el.instagramLink.href = CONFIG.instagram;
+      el.whatsappLink.href = `https://wa.me/${CONFIG.whatsapp}`;
+      el.footerEmail.href = `mailto:${CONFIG.email}`;
+      el.footerEmail.textContent = CONFIG.email;
+      el.footerPhone.href = `tel:${CONFIG.phone.replace(/[^+\d]/g, '')}`;
+      el.footerPhone.textContent = CONFIG.phone;
+      el.footerAddress.textContent = CONFIG.address || CONFIG.city;
+      el.floatingWhatsapp.href = `https://wa.me/${CONFIG.whatsapp}`;
+      el.agentCardName.textContent = CONFIG.agentName;
+      el.copyYear.textContent = new Date().getFullYear();
+    }
+
+    function populateCityFilters() {
+      const cities = [...new Set(state.properties.map(p => p.city))].sort((a, b) => a.localeCompare(b));
+
+      const cityOptions = ['<option value="">All Cities</option>', ...cities.map(c => `<option value="${c}">${c}</option>`)].join('');
+      el.filterCity.innerHTML = cityOptions;
+      el.heroCity.innerHTML = cityOptions;
+    }
+
+    function getCurrentFilters() {
+      return {
+        city: el.filterCity.value,
+        type: el.filterType.value,
+        budget: parseBudgetRange(el.filterBudget.value),
+        bhk: el.filterBhk.value,
+        sortBy: el.sortBy.value
+      };
+    }
+
+    function filterAndSortProperties() {
+      const { city, type, budget, bhk, sortBy } = getCurrentFilters();
+
+      let result = state.properties.filter(p => p.isActive);
+
+      if (city) result = result.filter(p => p.city === city);
+      if (type) result = result.filter(p => p.type === type);
+      if (bhk) {
+        result = result.filter(p => {
+          if (bhk === '4') return Number(p.bhk) >= 4;
+          return String(p.bhk) === bhk;
+        });
+      }
+      if (budget) {
+        result = result.filter(p => Number(p.price) >= budget.min && Number(p.price) <= budget.max);
+      }
+
+      if (sortBy === 'low-high') {
+        result.sort((a, b) => Number(a.price) - Number(b.price));
+      } else if (sortBy === 'high-low') {
+        result.sort((a, b) => Number(b.price) - Number(a.price));
+      } else {
+        result.sort((a, b) => Number(b.createdAt) - Number(a.createdAt));
+      }
+
+      state.filtered = result;
+      renderPropertyGrid();
+    }
+
+    function renderPropertyGrid() {
+      el.listingCount.textContent = String(state.filtered.length);
+
+      if (!state.filtered.length) {
+        el.propertyGrid.innerHTML = '';
+        el.noProperties.classList.remove('hidden');
+        return;
+      }
+
+      el.noProperties.classList.add('hidden');
+      el.propertyGrid.innerHTML = state.filtered.map(property => {
+        const image = getPrimaryImage(property);
+        const bhkLabel = Number(property.bhk) >= 4 ? '4+ BHK' : `${property.bhk} BHK`;
+        const statusChip = property.status !== 'Active' ? `<span class="text-xs px-2 py-1 rounded-full bg-slate-100 border border-slate-200">${property.status}</span>` : '';
+        return `
+          <article class="property-card bg-white rounded-2xl shadow-md overflow-hidden reveal">
+            <div class="relative overflow-hidden h-52">
+              <img src="${image}" alt="${property.title}" loading="lazy" class="property-image w-full h-full object-cover" />
+              <span class="absolute top-3 left-3 badge-gold text-xs px-3 py-1 rounded-full font-semibold">${bhkLabel} ${property.type}</span>
+            </div>
+            <div class="p-4">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <h3 class="font-bold text-lg text-navy">${property.title}</h3>
+                  <p class="text-slate-600 text-sm mt-1">${property.location}</p>
+                </div>
+                ${statusChip}
+              </div>
+              <div class="mt-4 flex items-center justify-between text-sm text-slate-600">
+                <p>${property.area} sq.ft.</p>
+                <p class="font-semibold text-navy text-base">${formatINR(property.price)}</p>
+              </div>
+              <div class="mt-4 flex gap-2">
+                <button data-id="${property.id}" class="view-detail-btn flex-1 border border-slate-300 rounded-lg py-2 text-sm font-medium hover:bg-slate-50">View Details</button>
+                <a href="${createWhatsAppLink(`Hi, I am interested in ${property.title} (${formatINR(property.price)}) in ${property.city}. Please share more details.`)}" target="_blank" rel="noopener" class="flex-1 text-center bg-green-500 text-white rounded-lg py-2 text-sm font-semibold hover:bg-green-600">Enquire Now</a>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join('');
+
+      bindPropertyCardActions();
+      triggerReveal();
+    }
+
+    function bindPropertyCardActions() {
+      document.querySelectorAll('.view-detail-btn').forEach(btn => {
+        btn.addEventListener('click', () => openPropertyModal(btn.dataset.id));
+      });
+    }
+
+    function openPropertyModal(propertyId) {
+      const property = state.properties.find(p => p.id === propertyId);
+      if (!property) return;
+
+      state.activeModalProperty = property;
+      state.activeModalImageIndex = 0;
+      el.modalTitle.textContent = property.title;
+      el.modalDescription.textContent = property.description;
+      el.modalLocation.textContent = `${property.location}, ${property.city}`;
+      el.modalPrice.textContent = formatINR(property.price);
+      el.modalArea.textContent = `${property.area} sq.ft.`;
+      el.callNowBtn.href = `tel:${CONFIG.phone.replace(/[^+\d]/g, '')}`;
+      el.modalWhatsappBtn.href = createWhatsAppLink(`Hi ${CONFIG.agentName}, I am interested in ${property.title} at ${property.location}.`);
+      el.modalEmailBtn.href = `mailto:${CONFIG.email}?subject=${encodeURIComponent('Property Enquiry: ' + property.title)}`;
+
+      el.modalAmenities.innerHTML = property.amenities.map(item => `<span class="bg-slate-100 border border-slate-200 text-sm px-3 py-1 rounded-full">${item}</span>`).join('');
+      renderModalImages();
+      el.propertyModal.classList.remove('hidden');
+      el.propertyModal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closePropertyModal() {
+      el.propertyModal.classList.add('hidden');
+      el.propertyModal.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    function renderModalImages() {
+      if (!state.activeModalProperty) return;
+      const images = state.activeModalProperty.images && state.activeModalProperty.images.length
+        ? state.activeModalProperty.images
+        : [PLACEHOLDER_IMAGE];
+
+      if (state.activeModalImageIndex >= images.length) state.activeModalImageIndex = 0;
+      if (state.activeModalImageIndex < 0) state.activeModalImageIndex = images.length - 1;
+
+      el.modalMainImage.src = images[state.activeModalImageIndex];
+      el.modalThumbs.innerHTML = images.map((img, idx) => `
+        <button data-idx="${idx}" class="modal-thumb border ${idx === state.activeModalImageIndex ? 'border-gold ring-2 ring-gold/50' : 'border-slate-200'} rounded-lg overflow-hidden shrink-0 w-20 h-14">
+          <img src="${img}" alt="thumb" class="w-full h-full object-cover" />
+        </button>
+      `).join('');
+
+      document.querySelectorAll('.modal-thumb').forEach(btn => {
+        btn.addEventListener('click', () => {
+          state.activeModalImageIndex = Number(btn.dataset.idx);
+          renderModalImages();
+        });
+      });
+    }
+
+    function renderTestimonials() {
+      el.testimonialTrack.innerHTML = testimonials.map(item => `
+        <article class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 w-[86vw] sm:w-[46vw] lg:w-[31%] shrink-0">
+          <p class="text-slate-700 leading-relaxed">"${item.text}"</p>
+          <div class="mt-4">
+            <p class="font-semibold text-navy">${item.name}</p>
+            <p class="text-sm text-slate-500">${item.city}</p>
+          </div>
+        </article>
+      `).join('');
+      updateTestimonialsPosition();
+    }
+
+    function updateTestimonialsPosition() {
+      const isMobile = window.innerWidth < 640;
+      const isTablet = window.innerWidth >= 640 && window.innerWidth < 1024;
+      const cardWidth = isMobile ? window.innerWidth * 0.86 + 20 : isTablet ? window.innerWidth * 0.46 + 20 : (window.innerWidth * 0.31 + 20);
+      el.testimonialTrack.style.transform = `translateX(-${state.testimonialIndex * cardWidth}px)`;
+    }
+
+    function handleTestimonialNav(direction) {
+      const max = testimonials.length - 1;
+      if (direction === 'next') {
+        state.testimonialIndex = state.testimonialIndex >= max ? 0 : state.testimonialIndex + 1;
+      } else {
+        state.testimonialIndex = state.testimonialIndex <= 0 ? max : state.testimonialIndex - 1;
+      }
+      updateTestimonialsPosition();
+    }
+
+    function triggerReveal() {
+      const elements = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.18 });
+
+      elements.forEach(elm => {
+        if (!elm.classList.contains('in-view')) observer.observe(elm);
+      });
+    }
+
+    function animateCounters() {
+      const counters = document.querySelectorAll('.counter');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          const target = Number(entry.target.dataset.target || 0);
+          let current = 0;
+          const duration = 1200;
+          const step = Math.max(1, Math.ceil(target / (duration / 24)));
+
+          const timer = setInterval(() => {
+            current += step;
+            if (current >= target) {
+              entry.target.textContent = String(target);
+              clearInterval(timer);
+            } else {
+              entry.target.textContent = String(current);
+            }
+          }, 24);
+
+          observer.unobserve(entry.target);
+        });
+      }, { threshold: 0.6 });
+
+      counters.forEach(counter => observer.observe(counter));
+    }
+
+    function resetAllFilters() {
+      el.filterCity.value = '';
+      el.filterType.value = '';
+      el.filterBudget.value = '';
+      el.filterBhk.value = '';
+      el.sortBy.value = 'newest';
+      filterAndSortProperties();
+    }
+
+    function applyHeroSearchToFilters() {
+      el.filterCity.value = el.heroCity.value;
+      el.filterType.value = el.heroType.value;
+      el.filterBudget.value = el.heroBudget.value;
+      el.filterBhk.value = el.heroBhk.value;
+      filterAndSortProperties();
+      document.getElementById('properties').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function setAdminSession(value) {
+      localStorage.setItem(STORAGE_KEYS.adminSession, value ? '1' : '0');
+    }
+
+    function isAdminLoggedIn() {
+      return localStorage.getItem(STORAGE_KEYS.adminSession) === '1';
+    }
+
+    function openAdminModal() {
+      el.adminModal.classList.remove('hidden');
+      el.adminModal.classList.add('flex');
+      renderAdminViews();
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeAdminModal() {
+      el.adminModal.classList.add('hidden');
+      el.adminModal.classList.remove('flex');
+      if (el.propertyModal.classList.contains('hidden')) {
+        document.body.style.overflow = '';
+      }
+    }
+
+    function renderAdminViews() {
+      if (isAdminLoggedIn()) {
+        el.adminLoginView.classList.add('hidden');
+        el.adminDashboardView.classList.remove('hidden');
+        renderAdminStats();
+        renderAdminTable();
+        renderRecentLeads();
+      } else {
+        el.adminLoginView.classList.remove('hidden');
+        el.adminDashboardView.classList.add('hidden');
+      }
+    }
+
+    function renderAdminStats() {
+      const total = state.properties.length;
+      const active = state.properties.filter(p => p.isActive).length;
+      const enquiries = getEnquiriesCount();
+      el.statTotal.textContent = String(total);
+      el.statActive.textContent = String(active);
+      el.statEnquiries.textContent = String(enquiries);
+    }
+
+    function renderAdminTable() {
+      el.adminTableBody.innerHTML = state.properties.map(item => `
+        <tr class="border-b border-slate-100">
+          <td class="py-3 pr-3">${item.title}</td>
+          <td class="py-3 pr-3">${item.city}</td>
+          <td class="py-3 pr-3">${formatINR(item.price)}</td>
+          <td class="py-3 pr-3">${item.status}</td>
+          <td class="py-3 pr-3">${item.isActive ? 'Yes' : 'No'}</td>
+          <td class="py-3">
+            <div class="flex gap-2">
+              <button data-id="${item.id}" class="admin-edit text-blue-600 hover:underline">Edit</button>
+              <button data-id="${item.id}" class="admin-delete text-red-600 hover:underline">Delete</button>
+              <button data-id="${item.id}" class="admin-toggle text-amber-700 hover:underline">Toggle Active</button>
+            </div>
+          </td>
+        </tr>
+      `).join('');
+
+      document.querySelectorAll('.admin-edit').forEach(btn => {
+        btn.addEventListener('click', () => editProperty(btn.dataset.id));
+      });
+      document.querySelectorAll('.admin-delete').forEach(btn => {
+        btn.addEventListener('click', () => deleteProperty(btn.dataset.id));
+      });
+      document.querySelectorAll('.admin-toggle').forEach(btn => {
+        btn.addEventListener('click', () => togglePropertyActive(btn.dataset.id));
+      });
+    }
+
+    function clearPropertyForm() {
+      el.editPropertyId.value = '';
+      el.propertyForm.reset();
+      state.pendingImages = [];
+      el.imageCount.textContent = '0';
+      document.querySelectorAll('.amenity-checkbox').forEach(cb => cb.checked = false);
+      el.pStatus.value = 'Active';
+      el.pType.value = 'Apartment';
+      el.pBhk.value = '1';
+    }
+
+    function editProperty(id) {
+      const property = state.properties.find(p => p.id === id);
+      if (!property) return;
+
+      el.editPropertyId.value = property.id;
+      el.pTitle.value = property.title;
+      el.pCity.value = property.city;
+      el.pLocation.value = property.location;
+      el.pPrice.value = property.price;
+      el.pType.value = property.type;
+      el.pBhk.value = String(property.bhk);
+      el.pArea.value = property.area;
+      el.pDescription.value = property.description;
+      el.pStatus.value = property.status;
+      state.pendingImages = property.images ? [...property.images] : [];
+      el.imageCount.textContent = String(state.pendingImages.length);
+
+      document.querySelectorAll('.amenity-checkbox').forEach(cb => {
+        cb.checked = property.amenities.includes(cb.value);
+      });
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function deleteProperty(id) {
+      const confirmed = confirm('Delete this property permanently?');
+      if (!confirmed) return;
+
+      state.properties = state.properties.filter(p => p.id !== id);
+      persistAndRefresh();
+    }
+
+    function togglePropertyActive(id) {
+      state.properties = state.properties.map(item => item.id === id ? { ...item, isActive: !item.isActive } : item);
+      persistAndRefresh();
+    }
+
+    async function filesToBase64(files) {
+      const limitedFiles = [...files].slice(0, 5);
+      const results = await Promise.all(limitedFiles.map(file => new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(String(reader.result));
+        reader.onerror = () => reject(new Error('Image read failed'));
+        reader.readAsDataURL(file);
+      })));
+      return results;
+    }
+
+    async function handleImageUpload(event) {
+      const files = event.target.files;
+      if (!files || !files.length) return;
+
+      const uploaded = await filesToBase64(files);
+      state.pendingImages = [...state.pendingImages, ...uploaded].slice(0, 5);
+      el.imageCount.textContent = String(state.pendingImages.length);
+      event.target.value = '';
+    }
+
+    function collectAmenities() {
+      return [...document.querySelectorAll('.amenity-checkbox:checked')].map(cb => cb.value);
+    }
+
+    function handlePropertyFormSubmit(event) {
+      event.preventDefault();
+
+      const isEdit = Boolean(el.editPropertyId.value);
+      const payload = {
+        id: isEdit ? el.editPropertyId.value : crypto.randomUUID(),
+        title: el.pTitle.value.trim(),
+        city: el.pCity.value.trim(),
+        location: el.pLocation.value.trim(),
+        price: Number(el.pPrice.value),
+        type: el.pType.value,
+        bhk: el.pBhk.value,
+        area: Number(el.pArea.value),
+        description: el.pDescription.value.trim(),
+        amenities: collectAmenities(),
+        status: el.pStatus.value,
+        isActive: el.pStatus.value === 'Active',
+        createdAt: isEdit ? (state.properties.find(p => p.id === el.editPropertyId.value)?.createdAt || Date.now()) : Date.now(),
+        images: state.pendingImages.length ? [...state.pendingImages] : []
+      };
+
+      if (isEdit) {
+        state.properties = state.properties.map(item => item.id === payload.id ? payload : item);
+      } else {
+        state.properties.push(payload);
+      }
+
+      persistAndRefresh();
+      clearPropertyForm();
+    }
+
+    function persistAndRefresh() {
+      writeProperties(state.properties);
+      populateCityFilters();
+      filterAndSortProperties();
+      renderAdminStats();
+      renderAdminTable();
+    }
+
+    function bindEvents() {
+      [el.filterCity, el.filterType, el.filterBudget, el.filterBhk, el.sortBy].forEach(control => {
+        control.addEventListener('change', filterAndSortProperties);
+      });
+
+      el.resetFilters.addEventListener('click', resetAllFilters);
+      el.heroSearchBtn.addEventListener('click', applyHeroSearchToFilters);
+
+      el.modalPrevImage.addEventListener('click', () => {
+        state.activeModalImageIndex -= 1;
+        renderModalImages();
+      });
+      el.modalNextImage.addEventListener('click', () => {
+        state.activeModalImageIndex += 1;
+        renderModalImages();
+      });
+      el.closePropertyModal.addEventListener('click', closePropertyModal);
+      el.propertyModal.addEventListener('click', (e) => {
+        if (e.target === el.propertyModal) closePropertyModal();
+      });
+
+      el.leadForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        if (document.getElementById('leadHoney').value.trim()) return;
+
+        const formData = new FormData(el.leadForm);
+        const lead = {
+          id: crypto.randomUUID(),
+          name: String(formData.get('name') || '').trim(),
+          phone: String(formData.get('phone') || '').trim(),
+          email: String(formData.get('email') || '').trim(),
+          interest: String(formData.get('interest') || '').trim(),
+          message: String(formData.get('message') || '').trim(),
+          createdAt: Date.now()
+        };
+
+        const leads = readLeads();
+        leads.unshift(lead);
+        writeLeads(leads);
+        setEnquiriesCount(leads.length);
+
+        el.leadSuccess.classList.remove('hidden');
+        el.leadForm.reset();
+        renderAdminStats();
+        renderRecentLeads();
+      });
+
+      el.testiPrev.addEventListener('click', () => handleTestimonialNav('prev'));
+      el.testiNext.addEventListener('click', () => handleTestimonialNav('next'));
+      setInterval(() => handleTestimonialNav('next'), 5000);
+      window.addEventListener('resize', updateTestimonialsPosition);
+
+      el.openAdminBtn.addEventListener('click', openAdminModal);
+      el.closeAdminModal.addEventListener('click', closeAdminModal);
+      el.adminModal.addEventListener('click', (e) => {
+        if (e.target === el.adminModal) closeAdminModal();
+      });
+
+      el.adminLoginBtn.addEventListener('click', () => {
+        const entered = el.adminPasswordInput.value;
+        if (entered === CONFIG.adminPassword) {
+          setAdminSession(true);
+          el.adminError.classList.add('hidden');
+          el.adminPasswordInput.value = '';
+          renderAdminViews();
+        } else {
+          el.adminError.classList.remove('hidden');
+        }
+      });
+
+      el.adminLogoutBtn.addEventListener('click', () => {
+        setAdminSession(false);
+        renderAdminViews();
+      });
+
+      el.addNewPropertyBtn.addEventListener('click', () => {
+        el.propertyFormPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        clearPropertyForm();
+        el.pTitle.focus();
+      });
+
+      el.exportLeadsBtn.addEventListener('click', exportLeadsCSV);
+      el.clearLeadsBtn.addEventListener('click', clearLeads);
+
+      document.querySelectorAll('.legal-open').forEach(button => {
+        button.addEventListener('click', () => openLegalModal(button.dataset.legal));
+      });
+
+      el.closeLegalModal.addEventListener('click', closeLegalModal);
+      el.legalModal.addEventListener('click', (e) => {
+        if (e.target === el.legalModal) closeLegalModal();
+      });
+
+      el.pImages.addEventListener('change', handleImageUpload);
+      el.propertyForm.addEventListener('submit', handlePropertyFormSubmit);
+      el.clearPropertyForm.addEventListener('click', clearPropertyForm);
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          closePropertyModal();
+          closeAdminModal();
+          closeLegalModal();
+        }
+      });
+
+      window.addEventListener('scroll', () => {
+        const header = document.getElementById('mainHeader');
+        if (window.scrollY > 20) {
+          header.classList.add('backdrop-blur');
+        } else {
+          header.classList.remove('backdrop-blur');
+        }
+      });
+    }
+
+    function init() {
+      applyConfig();
+      injectStructuredData();
+      state.properties = readProperties();
+      populateCityFilters();
+      filterAndSortProperties();
+      renderTestimonials();
+      renderAdminViews();
+      renderRecentLeads();
+      animateCounters();
+      triggerReveal();
+      bindEvents();
+    }
+
+    init();
+  </script>
+</body>
+</html>

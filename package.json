@@ -1,0 +1,20 @@
+{
+  "name": "ss-enterprises-realstate",
+  "version": "1.0.0",
+  "description": "S.S Enterprises - Premium Real Estate Management Platform",
+  "private": true,
+  "author": "S.S Enterprises",
+  "license": "ISC",
+  "scripts": {
+    "dev": "concurrently \"npm run backend:dev\" \"npm run frontend:start\"",
+    "start": "concurrently \"npm run backend:start\" \"npm run frontend:start\"",
+    "backend:dev": "cd backend && npm run dev",
+    "backend:start": "cd backend && npm start",
+    "frontend:start": "cd frontend && npm start",
+    "frontend:build": "cd frontend && npm run build",
+    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
