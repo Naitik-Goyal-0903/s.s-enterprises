@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: ss-enterprises-backend
+    env: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: ADMIN_USERNAME
+        value: Naitik
+      - key: ADMIN_PASSWORD
+        value: Naitik@123
+      - key: WHATSAPP_NUMBER
+        value: 7078542301
