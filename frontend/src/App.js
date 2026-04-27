@@ -11,10 +11,31 @@ import AdminLogin from './admin/AdminLogin';
 import AdminDashboard from './admin/AdminDashboard';
 
 const ADMIN_ENTRY_PATH = '/rk-secure-admin-portal-2026';
+const ADMIN_ALIAS_PATH = '/aadmin';
+const ADMIN_DIRECT_PATH = '/admin';
 
 function App() {
   const [isAdminAuth, setIsAdminAuth] = useState(false);
   const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Support clean URLs on static hosting by redirecting to hash routes.
+    const path = (window.location.pathname || '').toLowerCase();
+
+    if (path === ADMIN_ALIAS_PATH) {
+      window.location.replace(`${window.location.origin}/#${ADMIN_ALIAS_PATH}`);
+      return;
+    }
+
+    if (path === ADMIN_ENTRY_PATH) {
+      window.location.replace(`${window.location.origin}/#${ADMIN_ENTRY_PATH}`);
+      return;
+    }
+
+    if (path === ADMIN_DIRECT_PATH || path.startsWith(`${ADMIN_DIRECT_PATH}/`)) {
+      window.location.replace(`${window.location.origin}/#${ADMIN_DIRECT_PATH}`);
+    }
+  }, []);
 
   useEffect(() => {
     const initializeAuth = async () => {
@@ -61,9 +82,13 @@ function App() {
           path={ADMIN_ENTRY_PATH}
           element={isAdminAuth ? <Navigate to="/admin" /> : <AdminLogin setIsAdminAuth={setIsAdminAuth} />} 
         />
+        <Route
+          path={ADMIN_ALIAS_PATH}
+          element={isAdminAuth ? <Navigate to="/admin" /> : <AdminLogin setIsAdminAuth={setIsAdminAuth} />}
+        />
         <Route 
           path="/admin/*" 
-          element={isAdminAuth ? <AdminDashboard setIsAdminAuth={setIsAdminAuth} /> : <Navigate to={ADMIN_ENTRY_PATH} />} 
+          element={isAdminAuth ? <AdminDashboard setIsAdminAuth={setIsAdminAuth} /> : <Navigate to={ADMIN_ALIAS_PATH} />} 
         />
       </Routes>
     </HashRouter>
