@@ -30,6 +30,14 @@ const parseListField = (value) => {
   return [];
 };
 
+const escapeRegex = (value) => String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+const toContainsRegex = (value) => {
+  const trimmed = String(value || '').trim();
+  if (!trimmed) return null;
+  return { $regex: escapeRegex(trimmed), $options: 'i' };
+};
+
 function isAdminRequest(req) {
   try {
     const authHeader = req.headers.authorization || '';
@@ -72,11 +80,17 @@ router.get('/', async (req, res) => {
     const adminMode = isAdminRequest(req);
     let filter = adminMode ? {} : { isActive: true };
 
-    if (city) filter.city = city;
-    if (category) filter.category = category;
-    else if (type) filter.type = type;
-    if (bhk) filter.bhk = bhk;
-    if (status) filter.status = status;
+    const cityRegex = toContainsRegex(city);
+    const categoryRegex = toContainsRegex(category);
+    const typeRegex = toContainsRegex(type);
+    const bhkRegex = toContainsRegex(bhk);
+    const statusRegex = toContainsRegex(status);
+
+    if (cityRegex) filter.city = cityRegex;
+    if (categoryRegex) filter.category = categoryRegex;
+    else if (typeRegex) filter.type = typeRegex;
+    if (bhkRegex) filter.bhk = bhkRegex;
+    if (statusRegex) filter.status = statusRegex;
     if (min || max) {
       filter.price = {};
       if (min) filter.price.$gte = Number(min);
