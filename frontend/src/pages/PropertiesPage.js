@@ -69,7 +69,7 @@ export default function PropertiesPage() {
 
   const resolveImageUrl = (url) => {
     if (!url) return 'https://via.placeholder.com/300x200?text=Property';
-    if (url.startsWith('http')) return url;
+    if (url.startsWith('http') || url.startsWith('data:')) return url;
     return `${getBackendBaseUrl()}${url}`;
   };
 

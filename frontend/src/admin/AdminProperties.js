@@ -142,7 +142,7 @@ export default function AdminProperties({ onPropertyAdded }) {
 
   const resolveImageUrl = (url) => {
     if (!url) return 'https://via.placeholder.com/300x180?text=Property+Image';
-    if (url.startsWith('http')) return url;
+    if (url.startsWith('http') || url.startsWith('data:')) return url;
     return `${getBackendBaseUrl()}${url}`;
   };
 

@@ -39,7 +39,7 @@ export default function HomePage() {
 
   const resolveImageUrl = (url) => {
     if (!url) return 'https://via.placeholder.com/1200x700?text=S.S+Enterprises';
-    if (url.startsWith('http')) return url;
+    if (url.startsWith('http') || url.startsWith('data:')) return url;
     return `${getBackendBaseUrl()}${url}`;
   };
 

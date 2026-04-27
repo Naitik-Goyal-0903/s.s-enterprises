@@ -1,8 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const multer = require('multer');
-const path = require('path');
-const fs = require('fs');
 const jwt = require('jsonwebtoken');
 const Property = require('../models/Property');
 const { verifyToken } = require('./authRoutes');
@@ -44,36 +42,27 @@ function isAdminRequest(req) {
   }
 }
 
-// Multer Configuration
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    const uploadDir = path.join(__dirname, '../uploads');
-    if (!fs.existsSync(uploadDir)) {
-      fs.mkdirSync(uploadDir, { recursive: true });
-    }
-    cb(null, uploadDir);
-  },
-  filename: (req, file, cb) => {
-    const uniqueName = `${Date.now()}-${Math.round(Math.random() * 1E9)}${path.extname(file.originalname)}`;
-    cb(null, uniqueName);
-  }
-});
-
 const fileFilter = (req, file, cb) => {
-  const allowedTypes = /jpeg|jpg|png|gif/;
-  const extname = allowedTypes.test(path.extname(file.originalname).toLowerCase());
-  const mimetype = allowedTypes.test(file.mimetype);
-  if (mimetype && extname) {
+  const allowedTypes = ['image/jpeg', 'image/jpg', 'image/png', 'image/gif', 'image/webp'];
+  if (allowedTypes.includes(file.mimetype)) {
     return cb(null, true);
   } else {
     cb(new Error('Only image files are allowed'));
   }
 };
 
+const toDataUri = (file) => `data:${file.mimetype};base64,${file.buffer.toString('base64')}`;
+
+const makeFilename = (file) => {
+  const extension = String(file.originalname || 'image.jpg').split('.').pop().toLowerCase();
+  return `${Date.now()}-${Math.round(Math.random() * 1e9)}.${extension}`;
+};
+
 const upload = multer({
-  storage,
+  storage: multer.memoryStorage(),
   fileFilter,
-  limits: { fileSize: 5 * 1024 * 1024 } // 5MB
+  // Keep file size small because image data is stored directly inside MongoDB documents.
+  limits: { fileSize: 1200 * 1024 } // 1.2MB per image
 });
 
 // Get all properties
@@ -161,8 +150,8 @@ router.post('/', verifyToken, upload.array('images', 5), async (req, res) => {
     }
 
     const images = files.map(file => ({
-      url: `/uploads/${file.filename}`,
-      filename: file.filename
+      url: toDataUri(file),
+      filename: makeFilename(file)
     }));
 
     const property = new Property({
@@ -189,12 +178,6 @@ router.post('/', verifyToken, upload.array('images', 5), async (req, res) => {
     await property.save();
     res.status(201).json({ success: true, data: property });
   } catch (error) {
-    // Clean up uploaded files on error
-    if (req.files) {
-      req.files.forEach(file => {
-        fs.unlink(file.path, err => {});
-      });
-    }
     res.status(500).json({ success: false, error: error.message });
   }
 });
@@ -276,15 +259,12 @@ router.put('/:id', verifyToken, upload.array('images', 5), async (req, res) => {
     if (Array.isArray(req.files) && req.files.length > 0) {
       const totalImageCount = (property.images?.length || 0) + req.files.length;
       if (totalImageCount > 5) {
-        req.files.forEach(file => {
-          fs.unlink(file.path, err => {});
-        });
         return res.status(400).json({ success: false, error: 'Maximum 5 images are allowed per property' });
       }
 
       const newImages = req.files.map(file => ({
-        url: `/uploads/${file.filename}`,
-        filename: file.filename
+        url: toDataUri(file),
+        filename: makeFilename(file)
       }));
       property.images = [...property.images, ...newImages];
     }
@@ -292,11 +272,6 @@ router.put('/:id', verifyToken, upload.array('images', 5), async (req, res) => {
     await property.save();
     res.json({ success: true, data: property });
   } catch (error) {
-    if (req.files) {
-      req.files.forEach(file => {
-        fs.unlink(file.path, err => {});
-      });
-    }
     res.status(500).json({ success: false, error: error.message });
   }
 });
@@ -315,10 +290,6 @@ router.delete('/:id/image/:filename', verifyToken, async (req, res) => {
       return res.status(404).json({ success: false, error: 'Image not found' });
     }
 
-    // Delete file from disk
-    const filePath = path.join(__dirname, '../uploads', decodedFilename);
-    fs.unlink(filePath, err => {});
-
     // Remove from database
     property.images = property.images.filter(img => img.filename !== decodedFilename);
     await property.save();
@@ -336,12 +307,6 @@ router.delete('/:id', verifyToken, async (req, res) => {
     if (!property) {
       return res.status(404).json({ success: false, error: 'Property not found' });
     }
-
-    // Delete all images from disk
-    property.images.forEach(img => {
-      const filePath = path.join(__dirname, '../uploads', img.filename);
-      fs.unlink(filePath, err => {});
-    });
 
     res.json({ success: true, message: 'Property deleted successfully' });
   } catch (error) {
