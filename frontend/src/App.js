@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
 import { verifyToken as verifyAdminToken } from './services/api';
 
@@ -44,7 +44,7 @@ function App() {
   }
 
   return (
-    <BrowserRouter
+    <HashRouter
       future={{
         v7_startTransition: true,
         v7_relativeSplatPath: true
@@ -66,7 +66,7 @@ function App() {
           element={isAdminAuth ? <AdminDashboard setIsAdminAuth={setIsAdminAuth} /> : <Navigate to={ADMIN_ENTRY_PATH} />} 
         />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

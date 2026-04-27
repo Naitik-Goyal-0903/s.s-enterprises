@@ -52,6 +52,14 @@ app.use('/api/properties', propertyRoutes);
 app.use('/api/bookings', bookingRoutes);
 app.use('/api/auth', authRoutes);
 
+// Root info endpoint for quick browser checks
+app.get('/', (req, res) => {
+  res.json({
+    service: 'S.S Enterprises Backend API',
+    health: '/api/health'
+  });
+});
+
 // Health Check
 app.get('/api/health', (req, res) => {
   res.json({ status: 'Server running', timestamp: new Date() });
